@@ -1,0 +1,42 @@
+<header>
+  <a href="/" class="logo">
+    <img class="logo" src="/images/logo_p.png" width="145px" height="70px" />
+  </a>
+  <nav>
+    <button class="btn-toggle-navbar">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav_links">
+      <li><a href='/products/all'>Todos</a></li>
+      <li><a href="/products/Xbox">Grandes</a>
+        <!-- <ul class="submenu">
+            <li><a href="#">Xbox One S</a></li>
+            <li><a href="#">Xbox One X</a></li>
+        </ul> -->
+      </li>
+      <li><a href="/products/PS">Medianos</a>
+        <!-- <ul class="submenu">
+            <li><a href="#">PS4</a></li>
+            <li><a href="#">PS5</a></li>
+        </ul> -->
+      </li>
+      <li><a href="/products/Nintendo">Pequeños</a></li>
+      <li><a href="#">Otros</a></li>
+      <% if (locals.logueado) { %>
+      <% if (locals.user.idCategoriaU == 1) { %> 
+      <li><a href="/all">Contacto</a></li>
+      <% } %>
+      <% } %>
+    </ul>
+  </nav>
+  <% if (!locals.logueado) { %>
+  <a class="contact" href="/login"><button class="header-button">Iniciar Sesión</button></a>
+  <% } else { %>
+  <a class="contact" href="/logout"><button class="header-button">Cerrar Sesión</button></a>
+  <% } %>
+</header>
+<% if (locals.logueado) { %>
+  <div class="userLogin">
+      <a href="/profile/<%= locals.user.idUsuario %>"><strong><em><%= locals.user.nombre %> </em></strong></a>
+  </div>
+<% } %>

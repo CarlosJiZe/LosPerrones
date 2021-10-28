@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head') %>
+<!-- Header -->
+<%- include('partials/header') %>
+<body>
+    <% if (locals.logueado) { %> 
+        <% if (locals.user.idCategoriaU == 1) { %> 
+        <div class="contenedor-pequeno">
+            <div class="fila fila7">
+                <h2>Todos los Lomitos</h2>
+                <p></p>
+                <p class="buttons">
+                    <a class="action-button" href="/products/addproduct">Agregar un nuevo perro</a>
+                </p>
+            </div>
+        </div>
+        <% } %>
+    <% } %>
+    <div class="contenedor-pequeno">
+    <div class="fila">  
+        <% listpro.forEach(art=> { %> 
+                    <div class="col-4">
+                        <a href="/products/detail/<%= art.idProductos %> " class="linkbox">
+                            <section>
+                                <img src="/images/<%= art.imagenPrincipal %> ">
+                                <h4><%= art.nombre %> </h4>
+                                 
+                            </section>
+                        </a>
+                    </div>
+                    
+    
+        
+                     <% }) %>
+        </div>
+    </div>  
+         
+</body>
+<footer>
+    <!-- footer -->
+    <%- include('partials/footer') %>
+    <!-- /footer --> 
+  </footer>
+</html>

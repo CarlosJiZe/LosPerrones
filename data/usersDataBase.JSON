@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "nombre": "Joseph Alessandro",
+    "apellidos": "García García",
+    "email": "jalessandro.ag@gmail.com",
+    "password": "$2a$10$kofqK1hK4mscDjsMdFQgbOJQqct6muqSxEZOuVA2gzlSG5UUQvDY2",
+    "cumpleanios": "1998-05-31",
+    "rolUsuario": "admin",
+    "avatar": "user_img-avatar.jpg"
+  },
+  {
+    "id": 1628824727763,
+    "nombre": "Anthony Edward ",
+    "apellidos": "Stark",
+    "email": "im_ironman@avengers.com",
+    "password": "$2a$10$dmj8NstgmHCxMIX/Z47Ss..R3iGMr6LNoQgcrn9ejXaQWr7A8z5Oq",
+    "cumpleanios": "1970-05-29",
+    "tipo_usuario": "vendedor",
+    "rolUsuario": "admin",
+    "avatar": "user_img-Tony_Stark.jpg"
+  },
+  {
+    "id": 1629667478093,
+    "nombre": "Stephen",
+    "apellidos": "Vincent Strange",
+    "email": "dr_strange@guardiandelagema.com",
+    "password": "$2a$10$E8lfGN5jdIzuWohobmXKguz8VXcbT6dEgrTnDQA/mB5DCDwC7M3yK",
+    "cumpleanios": "1990-07-01",
+    "rolUsuario": "comprador",
+    "avatar": "user_img-Stephen-Strange.png"
+  },
+  {
+    "id": 1629668457509,
+    "nombre": "Carlos",
+    "apellidos": "Jimenez Zepeda",
+    "email": "0230071@up.edu.mx",
+    "password": "$2a$10$EV1cx6gDsMy9OyT/OyPyRuSoAoes0md1U82hA4m3z4sb.sOwnTIIK",
+    "cumpleanios": "2001-01-01",
+    "rolUsuario": "admin",
+    "avatar": "user_img-avatar.jpg"
+  },
+  {
+    "id": 1629771836668,
+    "nombre": "Bruce",
+    "apellidos": "Banner",
+    "email": "elvengadormasfuerte@gmail.com",
+    "password": "$2a$10$MLI5ghU5K2P6W.Ap2D4AR.uXNYwC9oBn6JT//i1mI382oA61ZQQxq",
+    "cumpleanios": "1982-07-23",
+    "rolUsuario": "admin",
+    "avatar": "user_img-Hulk.jpg"
+  }
+]

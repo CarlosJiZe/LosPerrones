@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+
+    <%- include('partials/header') %>
+<body>
+    <main class="users">
+        <div class="container">
+            <% usersList.forEach(user => { %>
+                <article class="card">
+                    <div class="card-left">
+                        <figure>
+                            <img src="/images/users/<%= user.avatar %>" alt="">
+                        </figure>
+                        <h3 id="id">#<%= user.idUsuario %></h3>
+                    </div>
+                    <div class="card-content">
+                        <h3 id="nombre"><%= user.nombre %> <%= user.apellidos %></h3>
+                        <% if (user.idCategoriaU) { %>
+                            <% if (user.idCategoriaU === 1) { %>
+                            <p id="rol">Tipo de usuario: Administrador</p>
+                            <%}else{ %>
+                                <p id="rol">Tipo de usuario: Comprador</p>
+                            <%} %>
+                        <%} %>
+                        <p id="email">Email: <%= user.email %></p>
+                        <br>
+                        <p class="buttons">
+                            <a class="action-button" href="/profile/<%= user.idUsuario %>">Ver detalle</a>
+                        </p>
+                    </div>   
+                </article>
+            <% }) %> 
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,835 @@
+/*
+Paleta de colores
+
+#F2F2EB
+#F25922
+#F24E29
+#8C3623
+#262626
+#ff523b
+
+Colores logo
+#3e7398 
+#F05742
+
+*/
+
+/*---------------------------------------
+                 #RESET
+---------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+/*---------------------------------------
+                #PRIMERA VISTA
+---------------------------------------*/
+ 
+/*-------Fondo-----------*/
+
+ .body-inicio{
+    background-image: url("/images/banner.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.body-inicio h2{
+    color: #fff;
+    padding-left: 15px ;
+}
+
+
+
+/*---------------------------------------
+                #GENERALES
+---------------------------------------*/
+.title{
+    text-align: center;
+    margin: 50px;
+    font-size: 2.5em;
+}
+
+.banner-usuario{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.msg-errores{
+    padding-top: 5px;
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+}
+
+
+/*====== Botones ======*/
+.action-button{
+    border: none;
+    font-size: 1em;
+    background: #FA6400;
+    color: #ffffff;
+    padding: 8px 30px;
+    margin: 10px 5px;
+    border-radius: 30px;
+    transition: background 0.5s;
+    text-decoration: none;
+}
+
+.action-button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* buttons hover */
+.action-button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+    background: #262626;
+    animation: btn 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes btn {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+/*====== Inputs ======*/ 
+
+.form-container label.label-1 input, 
+label.label-date input,  
+label.label-textarea textarea, 
+label.label-select select{
+    margin: 2px 0;
+    height: 35px;
+    text-align: center;
+    padding: 5px 0;
+    border-style: none;
+    border-radius: 13px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+.form-container label.label-1 input:focus
+{
+    outline: 2px   solid darkorange;
+}
+
+.userLogin{
+    background-color: #FA6400;
+    padding: 0 20px;
+    color: #fff;
+    
+}
+
+/*---------------------------------------
+                 #HEADER
+---------------------------------------*/
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #FA6400;
+}
+
+header .logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+header .nav_links a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.contact .header-button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #3e7398;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header-button:hover {
+background-color: rgba(0, 136, 169, 0.8);
+}
+
+.btn-toggle-navbar {
+    background-color: #3e7398;
+    color: #ffff;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
+  /*-------Fondo-----------*/
+
+.bgimage{
+    background-image: url("/images/banner.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*---------------------------------------
+                #FOOTER
+---------------------------------------*/
+footer div.footer div.container div.fila {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+
+.footer {
+    background: #262626;
+    color: #9d9d9d;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footer p {
+    color: #8a8a8a;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col3{
+  min-width: 250px;
+  margin-bottom: 20px;
+  flex-basis: 12%;
+}
+
+.footer li {
+    display: block;
+}
+
+.footer-col3 h3 a,
+.footer-col3 li a{
+    text-decoration: none;
+}
+
+.footer-col3 h3 a{color: white;}
+.footer-col3 li a{color: #9d9d9d;}
+  
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+/*---------------------------------------
+                #LOGIN/REGISTRO/PROFILE
+---------------------------------------*/
+.section-login .buttons, 
+.section-register .buttons, 
+.section-profile .buttons, 
+.section-addProduct .buttons{
+    text-align: center;
+}
+
+/*---------------------------------------
+                #LOGIN
+---------------------------------------*/
+
+.section-login{
+    height: 70vh;
+    margin: 20px;
+}
+
+.login{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+}
+
+.section-login .login-links{
+    display: flex;
+    flex: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.section-login .login-links a:first-child{
+    font-style: italic;
+    color: #000;
+}
+
+.section-login .login-links a:last-child{
+    color: #dd655a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login label.label-2  input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px #FA6400;
+}
+
+/*---------------------------------------
+                #REGISTRO
+---------------------------------------*/
+
+.register{
+    width: 600px;
+    height: 800px;
+    margin: auto;
+}
+
+.register p{
+    margin: 10px 0;
+}
+
+.section-register .register .label-2 .select{
+    padding: 0 10px;
+}
+
+.register label.label-date input:focus
+{
+    outline: 2px   solid darkorange;
+}
+
+.register label.label-2 label.label-radio input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px #FA6400;
+}
+
+/*---------------------------------------
+                #LISTA USUARIOS
+---------------------------------------*/
+
+main.users {
+    width: 80rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+.card {
+    display: flex;
+    margin-bottom: 2rem;
+    border-radius: var(--default-radius);
+
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+}
+.card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    padding: 1rem;
+    
+    background-color: #FA6400;
+    color: white;
+    text-align: center;
+    
+    border-radius: var(--default-radius) 0 0 var(--default-radius);
+}
+
+.card-left figure {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+.card-left figure img {
+    width: 100%;
+}
+
+.card-content {
+    width: 80%;
+    padding: 1rem;
+    background-color: #3e7398 ;        
+    color: white;
+    border-radius: 0 var(--default-radius) var(--default-radius) 0;
+}
+
+/*---------------------------------------
+                #PERFIL
+---------------------------------------*/
+  
+.imagen-perfil{
+    text-align: center;
+}
+
+.mini-divisor{
+    background: #FA6400;
+    border: none;
+    height: 7px;
+    margin: 2em auto;
+    outline: none;
+    width: 17em;
+}
+
+.profile {
+    width: 600px;
+    height: 800px;
+    margin: auto;
+}
+
+/*---------------------------------------
+            #AGREGAR PRODUCTO
+---------------------------------------*/
+
+.addProduct{
+    width: 600px;
+    height: 1000px;
+    margin: auto;
+}
+
+.addProduct label.label-2 label.label-radio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+.addProduct label.label-2 label.label-radio input{
+    margin: 1em 1em;
+    padding: .3em 0;
+}
+
+.addProduct label.label-textarea textarea{
+    height: 9em;
+    width: 13em;
+}
+
+.addProduct p{
+    margin: 1em 0;
+}
+
+.addProduct label.label-number{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addProduct label.label-number input{
+    margin: 0 3em;
+    padding: 0 1em;
+}
+
+.addProduct label.label-number input:first-child{
+    width: 10em;
+}
+
+.addProduct label.label-number input:last-child{
+    width: 10em;
+}
+
+ /*-------HOV-----------*/
+
+.addProduct label.label-2 label.label-radio label:hover{
+    color: #FA6400;
+    font-weight: bold;  
+}
+
+.addProduct label.label-2 label.label-radio input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px #FA6400;
+}
+
+
+.addProduct label.label-textarea textarea:focus,
+.addProduct label.label-select select:focus
+{
+    outline: 2px   solid darkorange;
+}
+
+
+span.actualizar_producto{
+    font-weight: bold;
+    color: #FA6400;
+}
+/*---------------------------------------
+            #DETALLE PRODUCTO
+---------------------------------------*/
+
+.fila{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50 px 0;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+
+.producto-unico{
+    margin-top: 80px;
+}
+
+.producto-unico .col-2 img{
+    padding: 0;
+    height: 50%;
+}
+
+.producto-unico .col-2{
+    padding: 20px;
+}
+
+.producto-unico h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.imagenes-chiquitas-fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenes-chiquitas-columna{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#izq{
+    padding-bottom: 0px;
+}
+
+
+.producto-unico input{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin: 15px 0px;
+    border: 1px solid #FA6400;
+    display: block;
+}
+
+input:focus{
+    outline: none;
+}
+
+.fila2{
+    justify-content: left;
+}
+
+.col-3{
+    flex-basis: 32%;
+    min-width: 250px;
+    margin-bottom: 10px;
+    background-color:#FA6400;
+    color:#fff;
+    text-align: center;
+}
+
+.col-3 h3{
+    text-align: center;
+}
+
+.ratings{
+    display: flex;
+    justify-content: space-evenly;
+    color:yellow;
+}
+
+
+.resena{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#noc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.resena span{
+    padding: 0 10px;
+}
+
+#preguntas{
+    width: 95%;
+}
+
+#preguntas::before{
+    content: "🔍";
+}
+
+.col-20{
+    flex-basis: 10%;
+    cursor: pointer;
+}
+
+.col-21{
+    flex-basis: 90%;
+    text-align: justify;
+    background-color: white;
+    padding: 5% 5%;
+}
+
+.fila3{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.fila7{
+    justify-content: space-between;
+    margin: 30px auto 50px;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+
+.col-4 p{
+    font-size: 14px;
+}
+
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+.rating2{
+    color: #FA6400;
+}
+
+.buttons-ED{
+    width: 100%;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.linkbox{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+p.InfoProduct{
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+h2.InfoProduct{
+    padding: 0 1.5rem;
+    text-align: justify;
+}
+
+
+/*---------------------------------------
+                #RESPONSIVE
+---------------------------------------*/
+
+/* For Mobile version: */
+@media (max-width: 761px){
+
+    .imagen-perfil img{
+        width: 20%;
+    }
+
+    .action-button.cancel{
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .action-button.cargar{
+        font-size: .79rem;
+        text-align: center;
+    }
+    p.buttons{
+        margin-bottom: 3rem;
+    }
+
+    p.buttons a.action-button{
+        font-size: .5rem;
+        text-align: center;
+        padding: .6rem;
+    }
+
+/*====== HEADER ======*/
+    header nav{
+        margin-right: auto;
+    }
+
+    .btn-toggle-navbar{
+        font-size: 1em;
+    }
+
+    .nav_links{
+        display: none;
+    }
+
+    .contact .header-button{
+        font-size: 11px;
+        margin-left: 10px;
+        padding: 9px 15px;
+    }
+
+/*====== Footer ======*/
+    footer div.footer div.container div.fila {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    footer .footer-col3{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /*====== Forms ======*/
+
+    .form-container{
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+
+    .buttons-ED form .action-button{
+        margin-left: 0;
+        font-size: 8px;
+        text-align: center;
+    }
+
+    main.users {
+        width: 20rem;
+        padding: 1rem;
+    }
+    .card-content h3#nombre{
+        font-size: 1rem;
+    }
+
+    .card-content a.action-button{
+        font-size: .5rem;
+    }
+
+    .card-content p#email, 
+    .card-content p#rol{
+        display: none;
+    }
+    .card-left, .card-content{
+        width: 50%;
+    }
+    .card-left h3#id{
+        padding: 1rem 0;
+        font-size: .7rem;
+    }
+    
+    .card-left figure{
+        height: 70px;
+        width: 70px;
+    }
+}
+  
+  
+  /* For tablet and version: */
+  @media (min-width: 761px){
+
+    .buttons-ED form .action-button{
+        margin-left: 5rem;
+        font-size: 8px;
+        text-align: center;
+    }
+
+    
+
+
+/*====== HEADER ======*/
+    .btn-toggle-navbar {
+        display: none;
+    }
+
+/*====== Footer ======*/
+    footer div.footer div.container div.fila {
+      display: inline-flex;
+    }
+  
+    footer .footer-col3{
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .section-login label.label-1 input, 
+    .section-register label.label-1 input,
+    .section-register label.label-date input,
+    .section-profile label.label-1 input,
+    .section-profile label.label-date input,
+    .section-addProduct label.label-1 input,
+    .section-addProduct label.label-textarea textarea,
+    .section-addProduct label.label-select select
+    {
+        width: 600px;
+    }
+  
+}
+
+@media (min-width: 1020px){
+    .buttons-ED form .action-button{
+        font-size: .8rem;
+    }
+}

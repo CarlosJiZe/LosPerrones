@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head') %>
+<!-- Header -->
+<%- include('partials/header') %>
+<body>
+    <div class="contenedor-pequeno">
+        <div class="fila fila7">
+            <h2>Lomitos Pequeños</h2>
+            <p></p>
+        </div>
+    </div>
+    <div class="contenedor-pequeno">
+    <div class="fila">  
+        <% listpro.forEach(art=> { %>
+            <% if(art.idPlataforma==3) {%>  
+                    <div class="col-4">
+                        <a href="/products/detail/<%= art.idProductos %> " class="linkbox">
+                            <section>
+                                <img src="/images/<%= art.imagenPrincipal %> ">
+                                <h4><%= art.nombre %> </h4> 
+                            </section>
+                        </a>
+                    </div>
+                    <% }else{ %>
+
+                    <% } %>     
+    
+        
+                     <% }) %>
+    </div>
+</div>  
+         
+</body>
+<footer>
+    <!-- footer -->
+    <%- include('partials/footer') %>
+    <!-- /footer --> 
+  </footer>
+</html>
