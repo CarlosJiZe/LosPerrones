@@ -17,16 +17,40 @@
             <div class="col-2">
                 <p>Home / <%= listpro2.nombre %> </p>
                 <h1><%= listpro2.nombre %></h1>
-                <p> <%= listpro2.breveDescripcion %></p>  
-                <h4>$<%= toThousand(listpro2.precio)%></h4>
-
-                <input type="number" value="1" min="1" max="100">
-                <a href=# class="action-button">Añadir al carrito</a>
+                <p> <%= listpro2.breveDescripcion %></p>
+                <br>
+                <% if(listpro2.idPlataforma==1) { %>
+                    <p> Tamaño: Mediano</p>   
+                    <% }else if(listpro2.idPlataforma==2){ %>
+                        <p> Tamaño: Grande</p> 
+                        <% }else if(listpro2.idPlataforma==3){ %>
+                            <p> Tamaño: Pequeño</p> 
+                            <% } %>
+                <% if(listpro2.idCategoria==1) { %>
+                <p> Sexo: Hembra</p>   
+                <% }else{ %>
+                    <p> Sexo: Macho</p> 
+                    <% } %>
+                <% if(listpro2.idConsola==1) { %>
+                    <p> Raza: Labrador</p>   
+                    <% }else if(listpro2.idConsola==2){ %>
+                        <p> Raza: Pastor alemán</p> 
+                        <% }else if(listpro2.idConsola==3){ %>
+                            <p> Raza: Boxer</p> 
+                            <% }else if(listpro2.idConsola==4){ %>
+                                <p> Raza: Coker spaniel</p>
+                                <% }else if(listpro2.idConsola==5){ %>
+                                    <p> Raza: Pit Bull</p>
+                                    <% }else if(listpro2.idConsola==6){ %>
+                                        <p> Raza: Chihuahua</p>
+                                        <% } %>   
+                <br>
+                <a href=# class="action-button">ADOPTAR</a>
                 <% if (locals.logueado) { %> 
                     <% if (locals.user.idCategoriaU == 1) { %> 
                     <div class="buttons-ED">
                             <form action="/products/delete/<%=listpro2.idProductos %>" method="POST" style="display: inline-flex">
-                                <a href="/products/edit/<%=listpro2.idProductos %> " class="action-button edit">EDITAR PRODUCTO</a>
+                                <a href="/products/edit/<%=listpro2.idProductos %> " class="action-button edit">EDITAR PUBLICACIÓN</a>
                                 <button type="submit" class="action-button delete">ELIMINAR</button>
                             </form>
                     </div>
@@ -49,60 +73,11 @@
 </div>
 <br>
 <br>
-<div class="contenedor-pequeno">
-    <div id="noc">
-        <div class="col-3">
-            <h3>VALORACIONES</h3>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-                <div class="ratings">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
 
-                </div>
-            <br>
-            <br>
-            <br>
-            </div>
-        <div class="col-3">
-                <h3>RESEÑAS</h3>
-                    <div class="resena">
-                    <span>Positivas</span>
-                    <span>Negativas</span>
-                    <span>Recientes</span>
-                    </div>
-                </div>
-        <div class="col-3">
-                    <h3>PREGUNTAS Y RESPUESTAS</h3>
-                        <div class="pregunta">
-                        <input type="text" name="preguntas" id="preguntas" placeholder="Realizar pregunta"></input></div>
-                            <div class="fila3">
-                                <div class="col-20">
-                                    <i class="fas fa-arrow-circle-up"></i>
-                                    <i class="fas fa-arrow-circle-down"></i>
-                                   
-
-                                </div>
-                                <div class="col-21">
-                                    <div class="por">
-                                        <p class="por">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aliquid exercitationem in adipisci debitis odio cum a commodi id, inventore facilis quasi libero dolore maiores sapiente animi aliquam, quis nam.</p>
-                                    </div>   
-                                </div>
-                            </div>
-        
-                    </div>
-    </div>
-</div>
 
 <div class="contenedor-pequeno">
     <div class="fila fila7">
-        <h2>LO MÁS NUEVO</h2>
+        <h2>MÁS LOMITOS</h2>
         <p>Ver más</p>
     </div>
 </div>
@@ -117,14 +92,6 @@
                         <section>
                             <img src="/images/<%= art.imagenPrincipal %> ">
                             <h4><%= art.nombre %> </h4>
-                            <div class="rating2">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            </div> 
-                            <p>$<%= toThousand(art.precio) %> </p> 
                             <% contador = contador+1%>
                         </section>
                     </a>

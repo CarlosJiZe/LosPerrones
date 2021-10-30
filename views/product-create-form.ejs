@@ -11,13 +11,13 @@
 <!--Main-->
   <body>
     <section class="section-addProduct">
-        <h1 class="title">Agregar Producto</h1>
-        <p class="banner-usuario"><em>Vender nuevo producto</em></p>
+        <h1 class="title">Agregar Lomito</h1>
+        <p class="banner-usuario"><em>Dar en adopción a un lomito</em></p>
         <div class="form-container addProduct">
             <form class="productform" method="POST" action="/products/addproduct" enctype="multipart/form-data">
                 <p>
                     <label class="label-1">
-                        Nombre del producto:
+                        Nombre del perro:
                         <input type="text" name="nombre" id="nombre" value="<%= locals.old && old.nombre %>" class='nombre'>
                     </label>
                 </p>
@@ -27,7 +27,7 @@
                 <p class='msg-errores' id='error1'></p>
                 <p>
                     <label class="label-textarea">
-                        Descripción del producto:
+                        Descripción del perro:
                         <textarea type="text" name="breveDescripcion" class='breveDescripcion'><%= locals.old && old.breveDescripcion %></textarea>
                     </label>
                 </p>
@@ -35,33 +35,16 @@
                     <p class="msg-errores"><%= errors.breveDescripcion.msg %></p>
                 <% } %> 
                 <p class='msg-errores' id='error2'></p>               
-                <p>
-                    <label class="label-1">
-                        <label class="label-number">
-                            Precio Unitario: 
-                            <input type="number" name="precio" min='0' value="<%= locals.old && old.precio %>" class='precio'>
-                            Rating: 
-                            <input type="number" name="rating" min='0' max="5" value="<%= locals.old && old.rating %>" class='rating'>
-                        </label>
-                    </label>
-                </p>
-                <% if (locals.errors && errors.precio) { %>
-                    <p class="msg-errores"><%= errors.precio.msg %></p>
-                <% } %> 
-                <% if (locals.errors && errors.rating) { %>
-                    <p class="msg-errores"><%= errors.rating.msg %></p>
-                <% } %> 
-                <p class='msg-errores' id='error3'></p>
-                <p class='msg-errores' id='error4'></p>                             
+                           
                 <p>
                     <label class="label-2">
-                        Plataforma:
+                        Tamaño:
                         <label class="label-radio">
-                            <label class="select" for="PS">Playstation</label>
-                            <input type="radio" name="plataforma" value='1' <%= locals.old && old.plataforma == '1' ? 'checked' : null%> id='plat'>
-                            <label class="select" for="Xbox">Xbox</label>
-                            <input type="radio" name="plataforma" value='2' <%= locals.old && old.plataforma == '2' ? 'checked' : null %> id='plat'>
-                            <label class="select" for="Nintendo">Nintendo</label>
+                            <label class="select" for="PS">Grande</label>
+                            <input type="radio" name="plataforma" value='2' <%= locals.old && old.plataforma == '2' ? 'checked' : null%> id='plat'>
+                            <label class="select" for="Xbox">Mediano</label>
+                            <input type="radio" name="plataforma" value='1' <%= locals.old && old.plataforma == '1' ? 'checked' : null %> id='plat'>
+                            <label class="select" for="Nintendo">Pequeño</label>
                             <input type="radio" name="plataforma" value='3' <%= locals.old && old.plataforma == '3' ? 'checked' : null %> id='plat'>
                         </label>
                     </label>
@@ -72,19 +55,19 @@
                 <p class='msg-errores' id='error5'></p> 
                 <p>
                     <label class="label-2">
-                        Consola:
+                        Raza:
                         <label class="label-radio">
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value='1' <%= locals.old && old.consola == '1' ? 'checked' : null %> >
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value='2' <%= locals.old && old.consola == '2' ? 'checked' : null %>> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value='3' <%= locals.old && old.consola == '3' ? 'checked' : null %>>
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value='4' <%= locals.old && old.consola == '4' ? 'checked' : null %>>
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value='5' <%= locals.old && old.consola == '5' ? 'checked' : null %>>
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value='6' <%= locals.old && old.consola == '6' ? 'checked' : null %>>
                         </label>
                     </label>
@@ -102,13 +85,11 @@
                 </p>
                 <p>
                     <label class="label-select">
-                        Categoría:
+                        Sexo:
                         <select name="categoria" id="categoria">
                             <option value="">Elegir</option>
-                            <option value='1'<%= locals.old && old.categoria == '1' ? 'selected' : null %> >Lo más nuevo</option>
-                            <option value='2'<%= locals.old && old.categoria == '2' ? 'selected' : null %>>Lo más comprado</option>
-                            <option value='3'<%= locals.old && old.categoria == '3' ? 'selected' : null %>>Mejores ofertas</option>
-                            <option value='4'<%= locals.old && old.categoria == '4' ? 'selected' : null %>>Preventas</option>
+                            <option value='1'<%= locals.old && old.categoria == '1' ? 'selected' : null %> >Hembra</option>
+                            <option value='2'<%= locals.old && old.categoria == '2' ? 'selected' : null %>>Macho</option>
                         </select>
                     </label>
                 </p>
@@ -127,7 +108,7 @@
                 <% } %> 
                 <p class='msg-errores' id='error8'></p>
                 <p class="buttons">
-                    <input class="action-button" type="submit" name="submit" value="Cargar Producto"/>
+                    <input class="action-button" type="submit" name="submit" value="Poner en adopción"/>
                  </p>
             </form>
         </div>

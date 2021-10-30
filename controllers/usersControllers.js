@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require("bcryptjs");
 const db=require('../database/models');
+let db2=require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const listpro = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -13,7 +14,10 @@ const string= n=>n.toString()
 
 const controller = {
 	index: (req, res) => {
-		res.render('index', {title: 'Inicio', cssFile : 'style', listpro:listpro, toThousand:toThousand, userlogin : ''})
+        db2.Producto.findAll()
+            .then(function(productos){
+                res.render('index', {title: 'Indice', cssFile : 'style', listpro:productos, toThousand:toThousand,userlogin: '' })
+            })
 	},
 	login: (req, res)=>{
 		res.render('login', {title: 'Login', cssFile : 'style'})  

@@ -11,16 +11,15 @@
 <!--Main-->
   <body>
     <section class="section-addProduct">
-        <h1 class="title">Editar Producto</h1>
+        <h1 class="title">Editar PUBLICACIÓN</h1>
         <p class="banner-usuario">
           <em>Actualizar información de 
-            <span class="actualizar_producto"><%=listpro3.nombre%></span> para 
-            <span class="actualizar_producto"><%=listpro3.consola.nombre%></span></em></p>
+            <span class="actualizar_producto"><%=listpro3.nombre%></span> </span></em></p>
         <div class="form-container addProduct">
           <form class="editpform" method="POST" action="/products/edit/<%=listpro3.idProductos%>?_method=PUT" enctype="multipart/form-data">
                 <p>
                     <label class="label-1">
-                        Nombre del producto:
+                        Nombre del perro:
                         <input type="text" name="nombre" value="<%=listpro3.nombre%>" class='nombre'>
                     </label>
                 </p>
@@ -30,7 +29,7 @@
                 <p class='msg-errores' id='error1'></p>
                 <p>
                     <label class="label-textarea">
-                        Descripción del producto:
+                        Descripción del perro:
                         <textarea type="text" name="breveDescripcion" class='breveDescripcion'><%=listpro3.breveDescripcion%></textarea>
                     </label>
                 </p>
@@ -39,47 +38,31 @@
                 <% } %>
                 <p class='msg-errores' id='error2'></p>
                 <p>
-                    <label class="label-1">
-                        <label class="label-number">
-                            Precio Unitario: 
-                            <input type="number" name="precio" value="<%=listpro3.precio%>" min='0' class='precio'>
-                            Rating: 
-                            <input type="number" name="rating" min='0' max="5" value="<%=listpro3.rating%>" class='rating'>
-                        </label>
-                    </label>
                 </p>
-                <% if (locals.errors && errors.precio) { %>
-                    <p class="msg-errores"><%= errors.precio.msg %></p>
-                <% } %> 
-                <% if (locals.errors && errors.rating) { %>
-                    <p class="msg-errores"><%= errors.rating.msg %></p>
-                <% } %> 
-                <p class='msg-errores' id='error3'></p>
-                <p class='msg-errores' id='error4'></p>
                 <p>
                     <label class="label-2">
-                        Plataforma:
+                        Tamaño:
                         <label class="label-radio">
                           <% if(listpro3.idPlataforma==1){  %> 
-                            <label class="select" for="PS">Playstation</label>
+                            <label class="select" for="PS">Mediano</label>
                             <input type="radio" name="plataforma" value="1" checked>
-                            <label class="select" for="Xbox">Xbox</label>
+                            <label class="select" for="Xbox">Grande</label>
                             <input type="radio" name="plataforma" value="2">
-                            <label class="select" for="Nintendo">Nintendo</label>
+                            <label class="select" for="Nintendo">Pequeño</label>
                             <input type="radio" name="plataforma" value="3">
                             <% }else if (listpro3.idPlataforma==2) {  %> 
-                            <label class="select" for="PS">Playstation</label>
+                            <label class="select" for="PS">Mediano</label>
                             <input type="radio" name="plataforma" value="1">
-                            <label class="select" for="Xbox">Xbox</label>
+                            <label class="select" for="Xbox">Grande</label>
                             <input type="radio" name="plataforma" value="2" checked>
-                            <label class="select" for="Nintendo">Nintendo</label>
+                            <label class="select" for="Nintendo">Pequeño</label>
                             <input type="radio" name="plataforma" value="3">
                             <% }else if (listpro3.idPlataforma==3) { %> 
-                            <label class="select" for="PS">Playstation</label>
+                            <label class="select" for="PS">Mediano</label>
                             <input type="radio" name="plataforma" value="1">
-                            <label class="select" for="Xbox">Xbox</label>
+                            <label class="select" for="Xbox">Grande</label>
                             <input type="radio" name="plataforma" value="2">
-                            <label class="select" for="Nintendo">Nintendo</label>
+                            <label class="select" for="Nintendo">Pequeño</label>
                             <input type="radio" name="plataforma" value="3" checked>
                             <% }  %> 
                         </label>
@@ -94,82 +77,82 @@
                         Consola:
                         <label class="label-radio">
                           <% if(listpro3.idConsola==1){ %> 
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value="1"  checked>
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value="2"> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value="3">
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value="4">
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value="5">
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value="6">
                             <% }else if(listpro3.idConsola==2) { %> 
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value="1">
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value="2" checked> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value="3">
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value="4">
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value="5">
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value="6">
                             <% }else if(listpro3.idConsola==3) { %> 
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value="1">
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value="2"> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value="3" checked>
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value="4">
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value="5">
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value="6">
                             <% }else if(listpro3.idConsola==4) { %> 
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value="1">
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value="2"> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value="3">
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value="4" checked>
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value="5">
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value="6">
                             <% }else if(listpro3.idConsola==5) { %> 
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value="1">
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value="2"> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value="3">
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value="4">
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value="5" checked>
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value="6">
                             <% }else if(listpro3.idConsola==6) { %> 
-                            <label class="select" for="PS5">Playstation 5</label>
+                            <label class="select" for="PS5">Labrador</label>
                             <input type="radio" name="consola" value="1">
-                            <label class="select" for="PS4">Playstation 4</label>
+                            <label class="select" for="PS4">Pastor alemán</label>
                             <input type="radio" name="consola" value="2"> 
-                            <label class="select" for="XboxOne">Xbox One</label>
+                            <label class="select" for="XboxOne">Boxer</label>
                             <input type="radio" name="consola" value="3">
-                            <label class="select" for="XboxSs">Xbox Series S</label>
+                            <label class="select" for="XboxSs">Coker spaniel</label>
                             <input type="radio" name="consola" value="4">
-                            <label class="select" for="XboxSx">Xbox Series X</label>
+                            <label class="select" for="XboxSx">Pit Bull</label>
                             <input type="radio" name="consola" value="5">
-                            <label class="select" for="NSwitch">Nintendo Switch</label>
+                            <label class="select" for="NSwitch">Chihuahua</label>
                             <input type="radio" name="consola" value="6" checked>
                             <% }  %> 
                         </label>
@@ -188,38 +171,18 @@
                 </p>
                 <p>
                     <label class="label-select">
-                        Categoría:
+                        Sexo:
                         <% if(listpro3.idCategoria==1){ %> 
                         <select name="categoria" id="categoria">
                             <option value="">Elegir</option>
-                            <option value="1" selected>Lo más nuevo</option>
-                            <option value="2">Lo más comprado</option>
-                            <option value="3">Mejores ofertas</option>
-                            <option value="4">Preventas</option>
+                            <option value="1" selected>Hembra</option>
+                            <option value="2">Macho</option>
                         </select>
                         <% }else if(listpro3.idCategoria==2) {%>
                         <select name="categoria" id="categoria">
                             <option value="">Elegir</option>
-                            <option value="1">Lo más nuevo</option>
-                            <option value="2" selected>Lo más comprado</option>
-                            <option value="3">Mejores ofertas</option>
-                            <option value="4">Preventas</option>
-                        </select>
-                        <% }else if(listpro3.idCategoria==3) {%>
-                        <select name="categoria" id="categoria">
-                            <option value="">Elegir</option>
-                            <option value="1">Lo más nuevo</option>
-                            <option value="2">Lo más comprado</option>
-                            <option value="3" selected>Mejores ofertas</option>
-                            <option value="4">Preventas</option>
-                        </select>
-                        <% }else if(listpro3.idCategoria==4) {%>
-                        <select name="categoria" id="categoria">
-                            <option value="">Elegir</option>
-                            <option value="1">Lo más nuevo</option>
-                            <option value="2">Lo más comprado</option>
-                            <option value="3">Mejores ofertas</option>
-                            <option value="4">Preventas</option>
+                            <option value="1">Hembra</option>
+                            <option value="2" selected>Macho</option>
                         </select>
                         <% } %> 
                     </label>

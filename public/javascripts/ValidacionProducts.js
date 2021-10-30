@@ -69,43 +69,8 @@ window.addEventListener("load",function(){
             campobrevedescripcion.style.backgroundColor = "white"
         }
     }
-    function validateprecio(){
-        if(campoprecio.value == ""){
-            p3.innerHTML='Debes poner un precio.'
-            campoprecio.placeholder = "Campo obligatorio";
-            campoprecio.style.backgroundColor = "orange"
-        }else if(!Number.isInteger(parseInt(campoprecio.value,10))){
-            p3.innerHTML='Se debe escribir un numero.'
-            campoprecio.style.backgroundColor = "orange"
-        }else if(parseInt(campoprecio.value,10) < 0){
-            p3.innerHTML='Se debe escribir un numero mayor a 0 para el precio.'
-            campoprecio.style.backgroundColor = "orange"
-        }else{
-            p3.innerHTML=null
-            campos['precio'] = true
-            campoprecio.style.backgroundColor = "white"
-        }
-    }
-    function validatrating(){
-        if(camporating.value == ""){
-            p4.innerHTML='Debes poner un rating.'
-            camporating.placeholder = "Campo obligatorio";
-            camporating.style.backgroundColor = "orange"
-        }else if(!Number.isInteger(parseInt(camporating.value,10))){
-            p4.innerHTML='Se debe escribir un numero.'
-            camporating.style.backgroundColor = "orange"
-        }else if(parseInt(camporating.value,10) < 0){
-            p4.innerHTML='Se debe escribir un numero mayor a 0 para el rating.'
-            camporating.style.backgroundColor = "orange"
-        }else if(parseInt(camporating.value,10) > 5){
-            p4.innerHTML='Se debe escribir un numero menor a 5 para el rating.'
-            camporating.style.backgroundColor = "orange"
-        }else{
-            p4.innerHTML=null
-            campos['rating'] = true
-            camporating.style.backgroundColor = "white"
-        }
-    }
+    
+   
     function validateplataforma(){
         if(document.querySelector('input[name="plataforma"]:checked') == null){
             p5.innerHTML='Debes elegir una plataforma.'
@@ -148,16 +113,13 @@ window.addEventListener("load",function(){
     }
     camponombre.addEventListener("blur", function(){ validatenombre(); })
     campobrevedescripcion.addEventListener("blur", function(){ validatebrevedescripcion(); })
-    campoprecio.addEventListener("blur", function(){validateprecio() ; })
-    camporating.addEventListener("blur", function(){ validatrating(); })
+
 
     
 
     function validateform(){
         validatenombre()
         validatebrevedescripcion()
-        validateprecio()
-        validatrating()
         validateplataforma()
         validateconsola()
         validatecategoria()
@@ -166,7 +128,7 @@ window.addEventListener("load",function(){
     
     productform.addEventListener('submit',(e)=>{
         validateform()
-        if(campos.nombre && campos.brevedescripcion && campos.precio && campos.rating && campos.plataforma && campos.consola && campos.categoria && campos.img){
+        if(campos.nombre && campos.brevedescripcion && campos.plataforma && campos.consola && campos.categoria && campos.img){
             console.log('Exito')
         }else{
             e.preventDefault()

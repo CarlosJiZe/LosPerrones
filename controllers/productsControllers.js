@@ -8,7 +8,7 @@ const { validationResult } = require('express-validator')
 
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const listpro = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const listpro = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 const string= n=>n.toString()
 
@@ -16,7 +16,7 @@ const controller = {
     index: (req, res) => {
         db.Producto.findAll()
             .then(function(productos){
-                res.render('all', {title: 'Detalles del producto', cssFile : 'style', listpro:productos, toThousand:toThousand})
+                res.render('/', {title: 'Indice', cssFile : 'style', listpro:productos, toThousand:toThousand})
             })
         // res.render('all', {title: 'Detalles del producto', cssFile : 'style', listpro:listpro, toThousand:toThousand})
     },

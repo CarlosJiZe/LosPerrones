@@ -9,71 +9,55 @@
 	  <!-- /Header -->
     <div class="contenedor-pequeno">
       <div class="fila fila7">
-          <h2>Más comprado</h2>
+          <h2>Machos</h2>
           <p></p>
       </div>
   </div>
   <div class="contenedor-pequeno">
-  <div class="fila">  
-      <% listpro.forEach(art=> { %>
-          <% if(art.categoria=="mas-comprado") {%>  
-                  <div class="col-4">
-                      <a href="/products/detail/<%= art.id %> " class="linkbox">
-                          <section>
-                              <img src="/images/<%= art.imagenPrincipal %> ">
-                              <h4><%= art.nombre %> </h4>
-                              <div class="rating2">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
-                              </div> 
-                              <p>$<%= toThousand(art.precio) %> </p> 
-                          </section>
-                      </a>
-                  </div>
-                  <% }else{ %>
-
-                  <% } %>     
-  
-      
-                   <% }) %>
+    <div class="fila">  
+        <% listpro.forEach(art=> { %>
+            <% if(art.idCategoria==2) {%>  
+                    <div class="col-4">
+                        <a href="/products/detail/<%= art.idProductos %> " class="linkbox">
+                            <section>
+                                <img src="/images/<%= art.imagenPrincipal %> ">
+                                <h4><%= art.nombre %> </h4> 
+                            </section>
+                        </a>
+                    </div>
+                    <% }else{ %>
+                        
+                    <% } %>     
+    
+        
+                     <% }) %>
     </div>
-  </div> 
+</div>   
   <div class="contenedor-pequeno">
     <div class="fila fila7">
-        <h2>Más Nuevo</h2>
+        <h2>Hembras</h2>
         <p></p>
     </div>
 </div>
 <div class="contenedor-pequeno">
-<div class="fila">  
-    <% listpro.forEach(art=> { %>
-        <% if(art.categoria=="mas-nuevo") {%>  
-                <div class="col-4">
-                    <a href="/products/detail/<%= art.id %> " class="linkbox">
-                        <section>
-                            <img src="/images/<%= art.imagenPrincipal %> ">
-                            <h4><%= art.nombre %> </h4>
-                            <div class="rating2">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            </div> 
-                            <p>$<%= toThousand(art.precio) %> </p> 
-                        </section>
-                    </a>
-                </div>
-                <% }else{ %>
+    <div class="fila">  
+        <% listpro.forEach(art=> { %>
+            <% if(art.idCategoria==1) {%>  
+                    <div class="col-4">
+                        <a href="/products/detail/<%= art.idProductos %> " class="linkbox">
+                            <section>
+                                <img src="/images/<%= art.imagenPrincipal %> ">
+                                <h4><%= art.nombre %> </h4> 
+                            </section>
+                        </a>
+                    </div>
+                    <% }else{ %>
 
-                <% } %>     
-
+                    <% } %>     
     
-                 <% }) %>
-  </div>
+        
+                     <% }) %>
+    </div>
 </div>  
   </body>
   <!-- footer -->

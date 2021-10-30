@@ -15,16 +15,14 @@ const productsController = require('../controllers/productsControllers');
 // ************ Validations ************
 const validateProductCreate = [
     body('nombre')
-        .notEmpty().withMessage('Debes poner el nombre del producto').bail()
+        .notEmpty().withMessage('Debes poner el nombre del perro').bail()
         .isLength({min:5}).withMessage('Se deben tener por lo menos 5 caracteres'),
     body('breveDescripcion')
-        .notEmpty().withMessage('Debes poner una descripción del producto').bail()
+        .notEmpty().withMessage('Debes poner una descripción del perro').bail()
         .isLength({min:20}).withMessage('Se deben tener por lo menos 20 caracteres'),
-    body('plataforma').notEmpty().withMessage('Debes elegir una plataforma'),
-    body('precio').notEmpty().withMessage('Debes poner un precio'),
-    body('rating').notEmpty().withMessage('Debes elegir una calificación'),
-    body('consola').notEmpty().withMessage('Debes elegir una consola'),
-    body('categoria').notEmpty().withMessage('Debes elegir una categoria'),
+    body('plataforma').notEmpty().withMessage('Debes elegir un tamaño'),
+    body('consola').notEmpty().withMessage('Debes elegir una raza'),
+    body('categoria').notEmpty().withMessage('Debes elegir un sexo'),
     body('imagenPrincipal').custom((value, {req})=>{
         let file = req.file;
         let acceptedExtensions=['.jpg','.png','.jpeg','.gif']
@@ -42,16 +40,14 @@ const validateProductCreate = [
 ]
 const validateProductModification = [
     body('nombre')
-        .notEmpty().withMessage('Debes poner el nombre del producto').bail()
+        .notEmpty().withMessage('Debes poner el nombre del perro').bail()
         .isLength({min:5}).withMessage('Se deben tener por lo menos 5 caracteres'),
     body('breveDescripcion')
-        .notEmpty().withMessage('Debes poner una descripción del producto').bail()
+        .notEmpty().withMessage('Debes poner una descripción del perro').bail()
         .isLength({min:20}).withMessage('Se deben tener por lo menos 20 caracteres'),
-    body('plataforma').notEmpty().withMessage('Debes elegir una plataforma'),
-    body('precio').notEmpty().withMessage('Debes poner un precio'),
-    body('rating').notEmpty().withMessage('Debes elegir una calificación'),
-    body('consola').notEmpty().withMessage('Debes elegir una consola'),
-    body('categoria').notEmpty().withMessage('Debes elegir una categoria'),
+    body('plataforma').notEmpty().withMessage('Debes elegir un tamaño'),
+    body('consola').notEmpty().withMessage('Debes elegir una raza'),
+    body('categoria').notEmpty().withMessage('Debes elegir un sexo'),
     body('imagenPrincipal').custom((value, {req})=>{
         let file = req.file;
         let acceptedExtensions=['.jpg','.png','.jpeg','.gif']
